@@ -109,7 +109,7 @@ export default function Hero() {
               interface for creating it, it is that users prefer you because
               your product is easy to use.
             </p>
-            <button className="w-[182.88px] h-[46.01px] md:w-[286px] md:h-[68px] bg-gradient-to-r from-[var(--mainGradient1)] to-[var(--mainGradient2)] rounded-[16px] text-white font-semibold text-[13.8px] md:text-2xl flex justify-center items-center">
+            <button className="active:scale-95 transition-all ease-in-out w-[182.88px] h-[46.01px] md:w-[286px] md:h-[68px] bg-gradient-to-r from-[var(--mainGradient1)] to-[var(--mainGradient2)] rounded-[16px] text-white font-semibold text-[13.8px] md:text-2xl flex justify-center items-center">
               Contact Me!{' '}
               <svg
                 className="ms-3"

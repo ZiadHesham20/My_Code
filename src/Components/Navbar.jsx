@@ -113,7 +113,7 @@ function Navbar() {
           {/* contact button */}
           <div className=" hidden lg:flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <button className="text-white bg-[var(--secondryColor)] w-[174.11px] h-[43.31px] rounded-[8.65px] hover:bg-[var(--secondryColorDark)] ">
+              <button className="active:scale-95 transition-all ease-in-out text-white bg-[var(--secondryColor)] w-[174.11px] h-[43.31px] rounded-[8.65px] hover:bg-[var(--secondryColorDark)] ">
                 Contact Me
               </button>
             </div>
@@ -209,7 +209,7 @@ function Navbar() {
           >
             Calendar
           </a>
-          <button className="text-white bg-[var(--secondryColor)] w-full h-[43.31px] rounded-[8.65px]">
+          <button className="active:scale-95 transition-all ease-in-out text-white bg-[var(--secondryColor)] w-full h-[43.31px] rounded-[8.65px]">
             Contact Me
           </button>
         </div>

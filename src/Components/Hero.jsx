@@ -1,9 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 
 export default function Hero() {
+  const serviceHero=[{
+    title:'Web Development',
+    image:"/Developer activity-amico.svg"
+  },
+  {
+    title:'Graphic Design',
+    image:"/brand creation-amico.svg"
+  },
+  {
+    title:'Video Editing',
+    image:"/Video files-amico.svg"
+  },
+  {
+    title:'Mobile Application',
+    image:"/Mobile development-amico.svg"
+  },
+  {
+    title:'Desktop Application',
+    image:"/Software code testing-amico.svg"
+  },
+  {
+    title:'Interior/Exterior Design',
+    image:"/Interior design-amico.svg"
+  },{
+    title:'Animation',
+    image:"/Animation-amico.svg"
+  }]
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [fadeClass, setFadeClass] = useState('');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFadeClass('fade-out');
+      setTimeout(() => {
+        setCurrentIndex(prevIndex => (prevIndex + 1) % serviceHero.length);
+        setFadeClass('fade-in');
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [serviceHero.length]);
+
   return (
     <>
-      <section className="pb-36  lg:pb-0 lg:h-dvh z-30 pt-5 relative overflow-hidden">
+      <section className="py-36 mt-10 lg:pb-0 lg:h-dvh z-30 pt-5 relative overflow-hidden">
         {/* background svgs */}
         <div className="absolute top-[100px] left-[-99px]">
           <svg
@@ -99,18 +143,23 @@ export default function Hero() {
             className="col-span-12 lg:col-span-6 relative mt-20"
             id="contactHeroButton"
           >
-            <h1 className="md:text-8xl text-[55.21px] leading-snug text-[var(--mainColor)] font-semibold">
-              Hi, I am <br />
-              Hassan 🎨
+            <h1 className="md:text-8xl text-[55.21px] leading-snug text-white font-semibold">
+            My <br /> 
+            <code>
+              <span >{'<'}</span>
+              {'CODE'}
+              <span className='text-[var(--secondryColor)]'>{'/'}</span>
+              <span >{'>'}</span>
+            </code>
             </h1>
-            <p className="max-w-[300px] md:max-w-[370px] md:text-sm  font-light leading-5 my-8">
+            <p className="max-w-[300px] md:max-w-[370px] md:text-base text-white font-light leading-5 my-8">
               I am a UI/UX Designer, I like to make interfaces simple and
               aesthetically pleasing for users; The idea is not to create an
               interface for creating it, it is that users prefer you because
               your product is easy to use.
             </p>
             <button className="active:scale-95 transition-all ease-in-out w-[182.88px] h-[46.01px] md:w-[286px] md:h-[68px] bg-gradient-to-r from-[var(--mainGradient1)] to-[var(--mainGradient2)] rounded-[16px] text-white font-semibold text-[13.8px] md:text-2xl flex justify-center items-center">
-              Contact Me!{' '}
+              Contact Us!{' '}
               <svg
                 className="ms-3"
                 width="26"
@@ -138,12 +187,15 @@ export default function Hero() {
             </button>
           </div>
           <div className="col-span-6 lg:block hidden z-30 me-20">
-            <figure className="w-full ">
+            <figure className="w-full homeServiceImages">
               <img
-                src="./Allura UI Windows.svg"
-                className="w-[959px] "
+                src={serviceHero[currentIndex].image}
+                className={`w-[600px] transition-opacity duration-500 ${fadeClass}`}
                 alt="svg image"
               />
+              <figcaption className='flex justify-center'>
+                <h2 className='text-3xl text-white font-semibold transition-opacity'>{serviceHero[currentIndex].title}</h2>
+              </figcaption>
             </figure>
           </div>
         </div>

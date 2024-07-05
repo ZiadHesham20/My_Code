@@ -4,19 +4,34 @@ import Slider from './Slider';
 export default function Projects() {
   const projectList = [
     {
-      name: 'Eventos Premium',
-      tags: 'Elegante - Serio - Estatus',
-      image: '/Eventos Premium 1.png',
+      name: 'Web Development',
+      tags: 'Frontend - Backend - Saas',
+      image: '/web/webDevelopment3.png',
+      link: 'webDevelopment'
     },
     {
-      name: 'Mi Portal U',
-      tags: 'Amigable - Dashboard - Simple',
-      image: '/Mask group.png',
+      name: 'Graphic Design',
+      tags: 'Logos - Posts - Thumbnails - Business Cards - Stories - Illustration - Digital Art - Concept Art - Character Design',
+      image: '/graphic.png',
+      link: 'graphicDesign'
     },
     {
-      name: 'A&C App',
-      tags: 'Elegante - Serio - Estatus',
-      image: '/A&C App.png',
+      name: 'Video Editing',
+      tags: 'Intro/Outro - Color Correction - VFX - Youtube Video - Ads Tiktok/Instagram Reels - Short Films - Social Media Storys',
+      image: '/Capture.png',
+      link: 'videoEditing'
+    },
+    {
+      name: 'Architectural Design',
+      tags: 'Interior Design - Exterior Design',
+      image: '/interiro.jfif',
+      link: 'architecturalDesign'
+    },
+    {
+      name: 'Animation',
+      tags: '2D Animation - Motion Graphic - White Board Animation',
+      image: '/ykwim-pixlated.gif',
+      link: 'animation'
     },
   ];
   return (
@@ -30,7 +45,7 @@ export default function Projects() {
             </h3>
           </div>
           <div className="col-span-12 w-full md:mb-40 md:mt-10 mb-16 mt-5">
-            <hr className="border-t-2 border-[var(--footerColor)] w-full " />
+            <hr className="border-t-2 border-[var(--secondryColor)] w-full " />
           </div>
           {/* slider */}
           <div className="col-span-12 w-full">

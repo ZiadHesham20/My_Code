@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,38 +10,26 @@ function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Function to toggle user menu
-  const toggleUserMenu = () => {
-    setIsUserMenuOpen(!isUserMenuOpen);
-  };
+  
 
   return (
-    <nav className="bg-[var(--mainColor)]  w-11/12 md:w-[633px] lg:w-[1311px] m-auto rounded-[14.42px]">
+    <nav className="bg-[var(--mainColor)]  w-full  m-auto ">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             {/* Profile dropdown */}
             <div className="relative ml-3">
-              <div className="flex items-center">
-                <button
-                  type="button"
-                  className={`relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 ${
-                    isUserMenuOpen ? 'bg-gray-200' : ''
-                  }`}
-                  id="user-menu-button"
-                  aria-expanded={isUserMenuOpen ? 'true' : 'false'}
-                  onClick={toggleUserMenu}
-                >
-                  <span className="absolute -inset-1.5"></span>
-                  <span className="sr-only">Open user menu</span>
-                  <img
+            <Link to={'/'}>
+            <div className="flex items-center">
+              <img
                     className="h-8 w-8 rounded-full object-contain"
-                    src="websiteLogo.png"
-                    alt=""
+                    src="/image.png"
+                    alt="My Code Logo"
                   />
-                </button>
-                <p className="text-white ms-2">Hassan Abu Ali</p>
+                <p className="text-white ms-2">My <code>{'<CODE/>'}</code></p>
               </div>
+            </Link>
+             
 
               {/* Dropdown menu */}
               <div
@@ -114,7 +103,7 @@ function Navbar() {
           <div className=" hidden lg:flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
               <button className="active:scale-95 transition-all ease-in-out text-white bg-[var(--secondryColor)] w-[174.11px] h-[43.31px] rounded-[8.65px] hover:bg-[var(--secondryColorDark)] ">
-                Contact Me
+                Contact Us
               </button>
             </div>
           </div>

@@ -47,7 +47,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="py-36 mt-10 lg:pb-0 lg:h-dvh z-30 pt-5 relative overflow-hidden">
+      <section className="py-36 mt-10 lg:pb-0 lg:h-dvh z-30 pt-5 relative overflow-hidden" id='home'>
         {/* background svgs */}
         <div className="absolute top-[100px] left-[-99px]">
           <svg
@@ -138,9 +138,9 @@ export default function Hero() {
           </svg>
         </div>
         {/* hero contnet */}
-        <div className="grid grid-cols-12 lg:h-dvh items-start  justify-items-center">
+        <div className="grid grid-cols-12 lg:h-dvh md:items-center lg:items-start  justify-items-center">
           <div
-            className="col-span-12 lg:col-span-6 relative mt-20"
+            className="col-span-12 md:col-span-6 relative mt-20"
             id="contactHeroButton"
           >
             <h1 className="md:text-8xl text-[55.21px] leading-snug text-white font-semibold">
@@ -153,12 +153,9 @@ export default function Hero() {
             </code>
             </h1>
             <p className="max-w-[300px] md:max-w-[370px] md:text-base text-white font-light leading-5 my-8">
-              I am a UI/UX Designer, I like to make interfaces simple and
-              aesthetically pleasing for users; The idea is not to create an
-              interface for creating it, it is that users prefer you because
-              your product is easy to use.
+            We are a skilled agency specializing in Web Programming, Graphic design, Social Media Posts, Video Editing, and Animation. With over three years of experience and a strong track record with big brands, our large team delivers top-notch projects efficiently and competitively.
             </p>
-            <button className="active:scale-95 transition-all ease-in-out w-[182.88px] h-[46.01px] md:w-[286px] md:h-[68px] bg-gradient-to-r from-[var(--mainGradient1)] to-[var(--mainGradient2)] rounded-[16px] text-white font-semibold text-[13.8px] md:text-2xl flex justify-center items-center">
+            <a href='#contactUs' className="active:scale-95 transition-all ease-in-out w-[182.88px] h-[46.01px] md:w-[286px] md:h-[68px] bg-gradient-to-r from-[var(--mainGradient1)] to-[var(--mainGradient2)] rounded-[16px] text-white font-semibold text-[13.8px] md:text-2xl flex justify-center items-center">
               Contact Us!{' '}
               <svg
                 className="ms-3"
@@ -184,9 +181,9 @@ export default function Hero() {
                   stroke-linejoin="round"
                 />
               </svg>
-            </button>
+            </a>
           </div>
-          <div className="col-span-6 lg:block hidden z-30 me-20">
+          <div className="col-span-6 md:block hidden z-30 lg:me-20">
             <figure className="w-full homeServiceImages">
               <img
                 src={serviceHero[currentIndex].image}

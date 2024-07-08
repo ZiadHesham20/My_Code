@@ -36,7 +36,7 @@ export default function Projects() {
   ];
   return (
     <>
-      <section className=" relative overflow-hidden">
+      <section className=" relative overflow-hidden" id='portfolio'>
         <div className="container grid grid-cols-12   justify-items-center w-11/12 m-auto px-12 pb-20 ">
           {/* title */}
           <div className="col-span-12 relative  justify-self-start w-full md:w-auto">

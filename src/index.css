@@ -13,6 +13,7 @@
   --secondryColorDark:#585bc4;
   --secondryColorOpactiyNone:rgba(117, 121, 255,0);
   background-color: #141529;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -101,6 +102,26 @@ background-position: 100% 100%;
 }
 .costumScroll{
   scrollbar-width: none;
+}
+.modal-box{
+  max-width: none;
+  max-height: none;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#Ideas {
+  animation: floating 2s ease-in-out infinite;
 }
 
 

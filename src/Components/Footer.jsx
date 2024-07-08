@@ -1,5 +1,7 @@
 import React from 'react';
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram,FaFacebook ,FaGoogle  } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 
 export default function Footer() {
   return (
@@ -24,30 +26,26 @@ export default function Footer() {
         {/* social contnet */}
         <div>
           <div className="flex items-center justify-center gap-5 md:gap-11">
-            <figure className="w-[19.48px] h-[19.48px] md:w-auto md:h-auto">
-              <a href="#">
-                <img src="/instagram.svg" className="w-full" alt="" />
-              </a>
-            </figure>
-            <figure className="w-[19.48px] h-[19.48px] md:w-auto md:h-auto">
-              <a href="#">
-                <img src="/facebook.svg" className="w-full" alt="" />
-              </a>
-            </figure>
-            <figure className="w-[19.48px] h-[19.48px] md:w-auto md:h-auto">
-              <a href="#">
-                <img src="/linkedin.svg" className="w-full" alt="" />
-              </a>
-            </figure>
-            <figure className="w-[19.48px] h-[19.48px] md:w-auto md:h-auto">
-              <a href="#">
-                <img src="/twitter.svg" className="w-full" alt="" />
-              </a>
-            </figure>
+            <div>
+              <Link target='_blank' to="https://www.instagram.com/my_code39?igsh=bDBjeTN5Z3psdmhy">
+              <FaInstagram className='text-4xl text-[var(--mainColor)] hover:text-[var(--secondryColor)] transition-all ease-in-out'/>
+              </Link>
+            </div>
+            <div>
+              <Link target='_blank' to="https://www.facebook.com/profile.php?id=100093022880956&mibextid=ZbWKwL">
+              <FaFacebook className='text-4xl text-[var(--mainColor)] hover:text-[var(--secondryColor)] transition-all ease-in-out'/>
+              </Link>
+            </div>
+            
+            <div>
+              <Link target='_blank' to="mailto:mycidee39@gmail.com">
+              <FaGoogle className='text-4xl text-[var(--mainColor)] hover:text-[var(--secondryColor)] transition-all ease-in-out'/>
+              </Link>
+            </div>
           </div>
           <div>
             <h4 className="text-[14px] md:text-[18px] text-[var(--thirdColor)] md:text-center mt-2 md:mt-5">
-              Hassan Abu Ali © 2022
+              My Code © 2024
             </h4>
           </div>
         </div>

@@ -39,7 +39,7 @@ export default function Services() {
       ];
       
 return<>
-  <div className='relative  lg:mb-48    mb-10 md:mb-0'>
+  <section className='relative  lg:mb-48    mb-10 md:mb-10' id='services'>
     <div className='container grid grid-cols-12 justify-items-center w-11/12 m-auto px-12'>
         {/* title */}
     <div className='col-span-12 relative  justify-self-start'>
@@ -86,7 +86,7 @@ return<>
 </div>
     </div>
     <div className='col-span-12 relative grid grid-cols-12 gap-10 mt-10'>
-    {servicesArray.map((elem,idx)=><div className='col-span-12 md:col-span-3 lg:col-span-4 m-auto md:m-0  ' key={idx}>
+    {servicesArray.map((elem,idx)=><div className='col-span-12 md:col-span-6 lg:col-span-4 m-auto md:m-0  ' key={idx}>
 
         <div className="card w-80 border-[0.1px] border-[var(--borderStrokeColor)]">
   <figure className="px-10 pt-10">
@@ -152,6 +152,6 @@ return<>
 
 
         </div>
-  </div>
+  </section>
   </>
 }

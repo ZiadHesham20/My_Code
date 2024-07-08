@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const location = useLocation();
 
   // Function to toggle mobile menu
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  
+  const isActive = (hash) => {
+    console.log(hash,location.hash);
+    return location.hash === hash ? 'border-[var(--secondryColor)]' : 'border-[var(--secondryColorOpactiyNone)]';
+  };
 
   return (
     <nav className="bg-[var(--mainColor)]  w-full  m-auto ">
@@ -19,92 +22,56 @@ function Navbar() {
           <div className="absolute inset-y-0 left-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             {/* Profile dropdown */}
             <div className="relative ml-3">
-            <Link to={'/'}>
-            <div className="flex items-center">
-              <img
+              <Link to={'/'}>
+                <div className="flex items-center">
+                  <img
                     className="h-8 w-8 rounded-full object-contain"
                     src="/image.png"
                     alt="My Code Logo"
                   />
-                <p className="text-white ms-2">My <code>{'<CODE/>'}</code></p>
-              </div>
-            </Link>
-             
+                  <p className="text-white ms-2">My <code>{'<CODE/>'}</code></p>
+                </div>
+              </Link>
 
               {/* Dropdown menu */}
-              <div
-                className={`absolute left-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${
-                  isUserMenuOpen ? 'block' : 'hidden'
-                }`}
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="user-menu-button"
-                tabIndex="-1"
-              >
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabIndex="-1"
-                  id="user-menu-item-0"
-                >
-                  Your Profile
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabIndex="-1"
-                  id="user-menu-item-1"
-                >
-                  Settings
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabIndex="-1"
-                  id="user-menu-item-2"
-                >
-                  Sign out
-                </a>
-              </div>
+              
             </div>
           </div>
           {/* Navigation links */}
           <div className="hidden lg:ml-6 lg:flex items-center h-full space-x-4">
             <a
-              href="#"
-              className="rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4  border-[var(--secondryColor)] transition-all ease-in-out"
+              href="#home"
+              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#home')} hover:border-[var(--secondryColor)] transition-all ease-in-out`}
               aria-current="page"
             >
-              Dashboard
+              Home
             </a>
             <a
-              href="#"
-              className="rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4  border-[var(--secondryColorOpactiyNone)] hover:border-[var(--secondryColor)] transition-all ease-in-out"
+              href="#aboutUs"
+              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#aboutUs')} hover:border-[var(--secondryColor)] transition-all ease-in-out`}
+              id='aboutUsTab'
             >
-              Team
+              About Us
             </a>
             <a
-              href="#"
-              className="rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4  border-[var(--secondryColorOpactiyNone)] hover:border-[var(--secondryColor)] transition-all ease-in-out"
+              href="#services"
+              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#services')} hover:border-[var(--secondryColor)] transition-all ease-in-out`}
             >
-              Projects
+              Services
             </a>
             <a
-              href="#"
-              className="rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4  border-[var(--secondryColorOpactiyNone)] hover:border-[var(--secondryColor)] transition-all ease-in-out"
+              href="#portfolio"
+              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#portfolio')} hover:border-[var(--secondryColor)] transition-all ease-in-out`}
             >
-              Calendar
+              Portfolio
             </a>
           </div>
           {/* contact button */}
           <div className=" hidden lg:flex items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
-              <button className="active:scale-95 transition-all ease-in-out text-white bg-[var(--secondryColor)] w-[174.11px] h-[43.31px] rounded-[8.65px] hover:bg-[var(--secondryColorDark)] ">
+            <div>
+              <a href='#contactUs' className="active:scale-95 transition-all ease-in-out text-white bg-[var(--secondryColor)] w-[174.11px] h-[43.31px] rounded-[8.65px] hover:bg-[var(--secondryColorDark)] text-center flex justify-center items-center">
                 Contact Us
-              </button>
+              </a>
             </div>
           </div>
           {/* burger menu*/}
@@ -120,11 +87,8 @@ function Navbar() {
               <span className="absolute -inset-0.5"></span>
               <span className="sr-only">Open main menu</span>
               {/* Icon when menu is closed */}
-
               <svg
-                className={`block h-6 w-6 ${
-                  isMobileMenuOpen ? 'hidden' : 'block'
-                }`}
+                className={`block h-6 w-6 ${isMobileMenuOpen ? 'hidden' : 'block'}`}
                 viewBox="0 0 36 14"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -134,16 +98,16 @@ function Navbar() {
                 <path
                   d="M2 2H34"
                   stroke="white"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M17.1643 12H33.9998"
                   stroke="white"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
               {/* Icon when menu is open */}
@@ -168,39 +132,33 @@ function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <div
-        className={`lg:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`}
-        id="mobile-menu"
-      >
+      <div className={`lg:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
         <div className="space-y-1 px-2 pb-3 pt-2">
           <a
             href="#"
-            className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+            className={`block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white ${isActive('#')}`}
             aria-current="page"
           >
-            Dashboard
+            Home
           </a>
           <a
-            href="#"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            href="#aboutUs"
+            className={`block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white ${isActive('#aboutUs')}`}
           >
-            Team
+            About Us
           </a>
           <a
-            href="#"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            href="#services"
+            className={`block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white ${isActive('#services')}`}
           >
-            Projects
+            Services
           </a>
           <a
-            href="#"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            href="#portfolio"
+            className={`block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white ${isActive('#portfolio')}`}
           >
-            Calendar
+            Portfolio
           </a>
-          <button className="active:scale-95 transition-all ease-in-out text-white bg-[var(--secondryColor)] w-full h-[43.31px] rounded-[8.65px]">
-            Contact Me
-          </button>
         </div>
       </div>
     </nav>

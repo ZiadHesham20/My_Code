@@ -11,7 +11,7 @@ export default function Slider({ projectList }) {
       cameraClass="gap-x-5 md:gap-x-10 "
     >
       {projectList.map((elem, idx) => (
-        <Link to={`/categoryDetails/${elem.link}`}>
+       
         <span
           key={idx}
           className="relative w-[100%] h-[120px] md:w-[518px] md:h-[276px] bg-white rounded-[16.29px] md:rounded-[40px] customShadow flex items-end justify-center"
@@ -24,15 +24,17 @@ export default function Slider({ projectList }) {
             />
           </div>
           <div className="py-5 md:py-10 w-4/5">
+          <Link to={`/categoryDetails/${elem.link}`}>
             <h4 className="text-[10px] md:text-[24px] gradiantText font-semibold">
               {elem.name}
             </h4>
+            </Link>
             <p className={`text-[7px] md:text-[14px] text-[var(--thirdColor)]`}>
               {elem.tags}
             </p>
           </div>
         </span>
-        </Link>
+       
       ))}
     </Flicking>
   );

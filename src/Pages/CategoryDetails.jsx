@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import WebDevelopment from '../Components/WebDevelopment'
 import VideoEditing from '../Components/VideoEditing'
@@ -9,6 +9,18 @@ import GraphicDesign from '../Components/GraphicDesign'
 
 export default function CategoryDetails() {
   let {type} = useParams()
+  useEffect(() => {
+   
+    
+   // Set scroll-behavior to auto
+   document.documentElement.style.scrollBehavior = 'auto';
+   
+   // Scroll to the top of the page instantly
+   window.scrollTo(0, 0);
+   
+   
+  }, [])
+  
 
   switch (type) {
     case 'webDevelopment':

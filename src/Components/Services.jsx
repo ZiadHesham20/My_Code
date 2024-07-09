@@ -1,51 +1,62 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 // className='scale-150'
 export default function Services() {
     const servicesArray = [
-        {
-          name: 'Web Development',
-          img: "/web.svg",
-          description: 'Creating and maintaining websites, including aspects such as web design, web programming, and database management.'
-        },
-        {
-          name: 'Graphic Design',
-          img: '/logoDesign.svg',
-          description: 'Designing unique and memorable logos that represent a brand or company identity.'
-        },
+      {
+        name: 'Web Development',
+        img: "/web.svg",
+        link:'webDevelopment',
+        animationfrom:'left'
+      },
+      {
+        name: 'Mobile Applications',
+        img: '/smartphone-svgrepo-com 1.svg',
+        link:'',
+        animationfrom:'down'
+      },
+      {
+        name: 'Desktop Applications',
+        img: '/devices-svgrepo-com 1.svg',
+        link:'',
+        animationfrom:'right'
+      },
+      {
+        name: 'Graphic Design',
+        img: '/logoDesign.svg',
+        link:'graphicDesign',
+        animationfrom:'left'
+      },
+      {
+        name:'Animation',
+        img:'/animation.svg',
+        link:'animation',
+        animationfrom:'down'
+      },
         {
           name: 'Video Editing',
           img: '/video-editing-svgrepo-com 1.svg',
-          description: 'Editing and assembling video footage, applying effects, and creating a finished video product.'
+          link:'videoEditing',
+          animationfrom:'right'
         },
-        {
-          name: 'Mobile Applications',
-          img: '/smartphone-svgrepo-com 1.svg',
-          description: 'Developing software applications designed to run on mobile devices such as smartphones and tablets.'
-        },
-        {
-          name: 'Desktop Applications',
-          img: '/devices-svgrepo-com 1.svg',
-          description: 'Creating software applications that are intended to run on desktop or laptop computers.'
-        },
+       
         {
           name: 'Interior/Exterior Design',
           img: '/I-EDesign.svg',
-          description: 'Designing and planning the layout, furnishings, and decorations for the interior and exterior of buildings.'
+          link:'architecturalDesign',
+          animationfrom:'left'
         },
-        {
-          name:'Animation',
-          img:'/animation.svg',
-        }
+        
       ];
       
 return<>
-  <section className='relative  lg:mb-48    mb-10 md:mb-10' id='services'>
+  <div className='relative  lg:mb-48  overflow-hidden lg:overflow-visible mt-36 mb-10 md:mb-10' id='services'>
     <div className='container grid grid-cols-12 justify-items-center w-11/12 m-auto px-12'>
         {/* title */}
-    <div className='col-span-12 relative  justify-self-start'>
-    <h3 className='font-semibold md:text-6xl text-2xl gradiantText'>Services</h3>
-    <div className='absolute bottom-0 right-full'>
-    <svg className='w-[75.21px] h-[37.07px] lg:w-[138px] lg:h-[68.01px]'  viewBox="0 0 83 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div className='col-span-12 relative  justify-self-start' id='serviceTitle'>
+    <h3 className='font-semibold md:text-6xl text-4xl gradiantText pb-0 lg:pb-1'>Services</h3>
+    <div className='absolute bottom-0 md:bottom-1 lg:bottom-0 right-full'>
+    <svg className='w-[75.21px] h-[37.07px] md:w-[100px] md:h-[50px] lg:w-[138px] lg:h-[68.01px]'  viewBox="0 0 83 68" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="13.7518" cy="8.68705" r="8.68705" fill="#EDEEFF"/>
 <circle cx="44.5288" cy="8.68705" r="8.68705" fill="#EDEEFF"/>
 <circle cx="74.313" cy="8.68705" r="8.68705" fill="#EDEEFF"/>
@@ -85,21 +96,46 @@ return<>
 
 </div>
     </div>
-    <div className='col-span-12 relative grid grid-cols-12 gap-10 mt-10'>
-    {servicesArray.map((elem,idx)=><div className='col-span-12 md:col-span-6 lg:col-span-4 m-auto md:m-0  ' key={idx}>
+    <div className="col-span-12 w-full md:mb-20 md:mt-10 mb-16 mt-5" id='serviceTitle'>
+             <hr className="border-t-2 border-[var(--secondryColor)] w-full " />
+          </div>
+    <div className='col-span-12 py-3 md:py-0' id='serviceContent'>
+      <div className=' relative grid grid-cols-12 gap-6 lg:gap-10 '>
+      {servicesArray.map((elem,idx)=><div className='col-span-6  md:col-span-4 m-auto md:m-0  ' key={idx} id={elem.animationfrom}>
 
-        <div className="card w-80 border-[0.1px] border-[var(--borderStrokeColor)]">
-  <figure className="px-10 pt-10">
-    <img
-      src={elem.img}
-      alt="Shoes"
-      className="rounded-xl w-full" />
-  </figure>
-  <div className="card-body items-center text-center">
-    <h2 className="card-title text-white">{elem.name}</h2>    
-  </div>
+{elem.name == 'Mobile Applications' || elem.name == 'Desktop Applications'?<div className="card w-[8rem] h-48 lg:h-auto lg:w-[21rem] border-[0.1px] border-[var(--borderStrokeColor)] serviceCard hover:scale-105 transition-all ease-in-out">
+<figure className="px-10 pt-10">
+<img
+src={elem.img}
+alt="Shoes"
+className="rounded-xl w-full" />
+</figure>
+<div className="card-body items-center text-center">
+<h2 className="card-title text-white text-sm lg:text-xl">{elem.name}</h2>    
 </div>
-    </div>)}
+</div>:<Link to={`/categoryDetails/${elem.link}`} onClick={()=>{document.documentElement.style.scrollBehavior = 'auto'}}>
+<div className="card w-[8rem] h-48 lg:h-auto lg:w-[21rem] border-[0.1px] border-[var(--borderStrokeColor)] serviceCard hover:scale-105 transition-all ease-in-out">
+<figure className="px-10 pt-10">
+<img
+src={elem.img}
+alt="Shoes"
+className="rounded-xl w-full" />
+</figure>
+<div className="card-body items-center text-center">
+<h2 className="card-title text-white text-sm lg:text-xl">{elem.name}</h2>    
+</div>
+</div>
+</Link>}
+
+
+
+
+
+
+
+</div>)}
+      </div>
+    
 </div>
 
   
@@ -123,21 +159,8 @@ return<>
 </svg>
 
         </div>
-        <div className='absolute top-[83%] lg:top-[110%] md:top-[121%] -left-[53px] lg:left-0'>
-        <svg className='w-[106.48px] h-[52.48px] md:w-[100px] md:h-[137px]' viewBox="0 0 141 137" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="1.5" cy="17.5" r="17.5" fill="#EDEEFF"/>
-<circle cx="63.5" cy="17.5" r="17.5" fill="#EDEEFF"/>
-<circle cx="123.5" cy="17.5" r="17.5" fill="#EDEEFF"/>
-<circle cx="1.5" cy="68.5" r="17.5" fill="#EDEEFF"/>
-<circle cx="63.5" cy="68.5" r="17.5" fill="#EDEEFF"/>
-<circle cx="123.5" cy="68.5" r="17.5" fill="#EDEEFF"/>
-<circle cx="1.5" cy="119.5" r="17.5" fill="#EDEEFF"/>
-<circle cx="63.5" cy="119.5" r="17.5" fill="#EDEEFF"/>
-<circle cx="123.5" cy="119.5" r="17.5" fill="#EDEEFF"/>
-</svg>
-
-        </div>
-        <div className='absolute top-[68%] right-0 hidden lg:block'>
+        
+        <div className='absolute top-[68%] right-0 hidden md:block'>
         <svg width="100" height="137" viewBox="0 0 139 137" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="17.5" cy="17.5" r="17.5" fill="#EDEEFF"/>
 <circle cx="78.5" cy="17.5" r="17.5" fill="#EDEEFF"/>
@@ -152,6 +175,6 @@ return<>
 
 
         </div>
-  </section>
+  </div>
   </>
 }

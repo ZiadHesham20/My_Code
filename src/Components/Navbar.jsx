@@ -65,6 +65,12 @@ function Navbar() {
             >
               Portfolio
             </a>
+            <a
+              href="#faq"
+              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#portfolio')} hover:border-[var(--secondryColor)] transition-all ease-in-out`}
+            >
+              FAQ
+            </a>
           </div>
           {/* contact button */}
           <div className=" hidden lg:flex items-center justify-center sm:items-stretch sm:justify-start">
@@ -159,6 +165,15 @@ function Navbar() {
           >
             Portfolio
           </a>
+          <a
+            href="#faq"
+            className={`block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white ${isActive('#portfolio')}`}
+          >
+            FAQ
+          </a>
+          <a href='#contactUs' className="active:scale-95 transition-all ease-in-out text-white bg-[var(--secondryColor)] w-full h-[43.31px] rounded-[8.65px] hover:bg-[var(--secondryColorDark)] text-center flex justify-center items-center">
+                Contact Us
+              </a>
         </div>
       </div>
     </nav>

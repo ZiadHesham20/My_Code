@@ -1,6 +1,6 @@
 import React from 'react'
 import { IoCallSharp } from "react-icons/io5";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -9,12 +9,6 @@ import { Link } from 'react-router-dom';
 export default function ContactUs() {
     const listItems = [
         {
-          title: 'Address',
-          link: 'Egypt Cairo', // Add the address link here
-          linkAnchor:'',
-          icon: <FaLocationDot className='text-5xl text-[var(--secondryColor)]'  />// Replace with actual icon class or component
-        },
-        {
           title: 'Phone',
           link: '01123437255', // Add the phone link here
           linkAnchor:'tel:01123437255',
@@ -22,9 +16,15 @@ export default function ContactUs() {
         },
         {
           title: 'Email',
-          link: 'mycidee39@gmail.com', // Add the email link here
+          link: 'mycodee39@gmail.com', // Add the email link here
           linkAnchor:'mailto:mycidee39@gmail.com',
           icon: <IoMail   className='text-5xl text-[var(--secondryColor)]' /> // Replace with actual icon class or component
+        },
+        {
+          title: 'Whatsapp',
+          link: '01123437255', // Add the phone link here
+          linkAnchor:'https://api.whatsapp.com/send/?phone=201123437255&text&type=phone_number&app_absent=0',
+          icon:  <FaWhatsapp  className='text-5xl text-[var(--secondryColor)]' /> // Replace with actual icon class or component
         },
         {
           title: 'Facebook',
@@ -41,22 +41,35 @@ export default function ContactUs() {
       ];
       
   return <>
-  <section className=" relative overflow-hidden mb-20" id='contactUs'>
-        <div className="container grid grid-cols-12   justify-items-center w-11/12 m-auto px-12  ">
+  <section className=" relative overflow-hidden  mb-20" id='contactUs'>
+        <div className="container grid grid-cols-12   justify-items-center w-11/12 m-auto px-12  relative" id='contactTitle'>
           {/* title */}
           <div className="col-span-12 relative  justify-self-start w-full md:w-auto">
-            <h3 className="font-semibold md:text-6xl text-2xl gradiantText portfolio relative">
+            <h3 className="font-semibold md:text-6xl text-4xl gradiantText relative" >
               Contact Us
             </h3>
           </div>
           <div className="col-span-12 w-full md:mb-10 md:mt-10 mb-5 mt-5">
             <hr className="border-t-2 border-[var(--secondryColor)] w-full " />
           </div>
-          {/* slider */}
+          <div className='absolute top-[3%] lg:top-[0%] md:top-[8%] md:-left-[55px] -left-7 lg:-left-24 ' >
+        <svg className='w-[75.21px] h-[37.07px] md:w-[100px] md:h-[50px] lg:w-[138px] lg:h-[68.01px]'  viewBox="0 0 83 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="13.7518" cy="8.68705" r="8.68705" fill="#EDEEFF"/>
+<circle cx="44.5288" cy="8.68705" r="8.68705" fill="#EDEEFF"/>
+<circle cx="74.313" cy="8.68705" r="8.68705" fill="#EDEEFF"/>
+<circle cx="13.7518" cy="34.0036" r="8.68705" fill="#EDEEFF"/>
+<circle cx="44.5288" cy="34.0036" r="8.68705" fill="#EDEEFF"/>
+<circle cx="74.313" cy="34.0036" r="8.68705" fill="#EDEEFF"/>
+<circle cx="13.7518" cy="59.3202" r="8.68705" fill="#EDEEFF"/>
+<circle cx="44.5288" cy="59.3202" r="8.68705" fill="#EDEEFF"/>
+<circle cx="74.313" cy="59.3202" r="8.68705" fill="#EDEEFF"/>
+</svg>
+
+        </div>
          
         </div>
         <div className='flex justify-items-center flex-wrap flex-col-reverse md:flex-row'>
-            <div className='w-full md:w-1/2 flex items-center justify-center md:justify-end'>
+            <div className='w-full md:w-1/2 flex items-center justify-center md:justify-end' id='contactContent'>
                 <div className='w-[80%]' >
                 <ul >
                     {listItems.map((elem,idx)=><li key={idx} className='mb-5 last:mb-0 last:border-b-0 border-b-[1px] p-3'>
@@ -64,7 +77,7 @@ export default function ContactUs() {
                         {elem.icon}
                         <div className='ms-5'>
                         <p className='text-lg text-white font-semibold'>{elem.title}</p>
-                        {elem.link != 'Egypt Cairo'?<Link target='_blank' to={elem.linkAnchor}>{elem.link}</Link>:<p className='text-base'>{elem.link}</p>}
+                        <Link target='_blank' className='text-gray-400' to={elem.linkAnchor}>{elem.link}</Link>
                         </div>
                         </div>
                     </li>)}
@@ -72,7 +85,7 @@ export default function ContactUs() {
                 </div>
             </div>
             {/* Svg Part */}
-            <div className='w-full md:w-1/2 flex items-start justify-center'>
+            <div className='w-full md:w-1/2 flex items-start justify-center' id='contactSvg'>
                 <figure className='w-3/4'>
                 <svg className='w-full' viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="ContactUs 1" clip-path="url(#clip0_236_2)">

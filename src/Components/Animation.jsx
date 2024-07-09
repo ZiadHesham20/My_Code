@@ -9,9 +9,8 @@ export default function Animation() {
           description: "In this evocative digital illustration, a solitary figure stands against a vibrant twilight sky filled with purples, pinks, and deep blues. The person, partially obscured by shadows, is smoking and appears contemplative. They blend into the evening shadows, contrasting with the colorful sky. Utility poles and wires stretch across the scene, adding urban realism, silhouetted against the sunset. The overall mood is one of quiet reflection and melancholy, with the serene, twilight colors enhancing the sense of solitude and contemplation. The artwork captures the emotional transition between day and night through light and shadow."
         },
         {
-          title: "Elements",
-          
-          src: "/animation/Elements.mp4",
+          title: "Youtube Channel Intro",
+          src: "/animation/elements.mp4",
           description: "This 2D animation, created using Photoshop and After Effects, showcases a seamless transformation through various elements. It begins with a realistic drop of water that ripples upon impact. These ripples morph into a blooming flower with detailed petals, which then transform into flickering flames. The flames take the shape of a bird that takes flight, eventually morphing into a human figure. Finally, a crocodile appears and consumes the person, bringing the animation to a dramatic close. Technically, Photoshop is used for detailed frame-by-frame drawings of each element, while After Effects animates the transitions, motion paths, and adds effects like motion blur and particle effects. Artistically, the animation uses distinct color palettes for each transformation and ensures smooth transitions with natural flow. Sound effects and music enhance the narrative and impact, creating a captivating visual story that showcases detailed transformations and seamless transitions."
         },
         {
@@ -19,7 +18,11 @@ export default function Animation() {
             src: "/animation/logoMockup.mp4",
             description: "An advertising mockup is a visual representation of how an advertisement will look once it is finalized and placed in its intended medium. It typically includes design elements, such as images, text, logos, and branding, arranged in a format that simulates the final output. Mockups are used to present concepts to clients, stakeholders, or team members, allowing them to see the design in context, provide feedback, and make necessary adjustments before the advertisement goes into production."
         },
-        
+        {
+          title: "Midnight",
+          src: "/animation/midnight.mp4",
+          description: "Midnight is an evocative and visually captivating video that encapsulates the serene beauty and enigmatic ambiance of the nighttime. Featuring meticulously edited sequences, the video seamlessly blends tranquil natural landscapes with mesmerizing urban scenes, creating a harmonious contrast between nature and modernity. The precise editing work enhances the mood, bringing out the essence of midnight through stunning visuals and fluid transitions. This piece showcases our expertise in video editing, combining technical proficiency with artistic vision to create an immersive viewing experience."
+      },
         
           
       ];

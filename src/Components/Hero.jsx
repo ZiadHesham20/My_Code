@@ -1,7 +1,34 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 
 export default function Hero() {
+
+  const pathVariants = {
+    hidden: {
+      opacity: 0,
+      pathLength: 0,
+      strokeDashoffset: 0
+    },
+    visible: {
+      opacity: 1,
+      pathLength: 1,
+      strokeDashoffset: 0, // Adjust this value if needed
+      // fill: 'white',
+      transition: {
+        pathLength: {
+          duration: 2,
+          ease: "easeInOut",
+        },
+        strokeDashoffset: {
+          duration: 2,
+          ease: "easeInOut",
+        },
+        
+      },
+    },
+  };
+
   const serviceHero=[{
     title:'Web Development',
     image:"/Developer activity-amico.svg"
@@ -43,11 +70,28 @@ export default function Hero() {
     }, 3000);
 
     return () => clearInterval(interval);
+
+
   }, [serviceHero.length]);
 
   return (
     <>
-      <section className="py-36 mt-10 lg:pb-0 lg:h-dvh z-30 pt-5 relative overflow-hidden" id='home'>
+      <div className="py-36 mt-10 lg:pb-0 h-dvh z-30 pt-5 relative overflow-hidden background" id='home'>
+      <span className='points'></span> 
+   <span className='points'></span>
+   <span className='points'></span>
+   <span className='points'></span>
+   <span className='points'></span>
+   <span className='points'></span>
+   <span className='points'></span>
+   <span className='points'></span>
+   <span className='points'></span>
+   <span className='points'></span>
+   <span className='points'></span>
+   <span className='points'></span>
+   <span className='points'></span>
+   <span className='points'></span>
+   <span className='points'></span>
         {/* background svgs */}
         <div className="absolute top-[100px] left-[-99px]">
           <svg
@@ -138,25 +182,22 @@ export default function Hero() {
           </svg>
         </div>
         {/* hero contnet */}
-        <div className="grid grid-cols-12 lg:h-dvh md:items-center lg:items-start  justify-items-center">
+        <div className="grid grid-cols-12 h-dvh md:items-center lg:items-start  justify-items-center pt-20 md:pt-0">
           <div
-            className="col-span-12 md:col-span-6 relative mt-20"
-            id="contactHeroButton"
+            className="col-span-12 mt-10 lg:col-span-6 relative "
+            
           >
-            <h1 className="md:text-8xl text-[55.21px] leading-snug text-white font-semibold">
-            My <br /> 
-            <code>
-              <span >{'<'}</span>
-              {'CODE'}
-              <span className='text-[var(--secondryColor)]'>{'/'}</span>
-              <span >{'>'}</span>
-            </code>
-            </h1>
-            <p className="max-w-[300px] md:max-w-[370px] md:text-base text-white font-light leading-5 my-8">
-            We are a skilled agency specializing in Web Programming, Graphic design, Social Media Posts, Video Editing, and Animation. With over three years of experience and a strong track record with big brands, our large team delivers top-notch projects efficiently and competitively.
+            <figure className='w-full flex justify-center '>
+            <img src="/logo-1.png" className="w-3/4  md:w-2/3 rounded-full" alt="My Code Logo" />
+          </figure>
+            
+            <div className='flex justify-center '>
+            <div className='relative'>
+            <p className="max-w-[300px] md:max-w-[370px] md:text-xl text-white font-light leading-5 my-8">
+            Are you ready to elevate your brand? 
             </p>
-            <a href='#contactUs' className="active:scale-95 transition-all ease-in-out w-[182.88px] h-[46.01px] md:w-[286px] md:h-[68px] bg-gradient-to-r from-[var(--mainGradient1)] to-[var(--mainGradient2)] rounded-[16px] text-white font-semibold text-[13.8px] md:text-2xl flex justify-center items-center">
-              Contact Us!{' '}
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2qEbT3dON9PGlYinAA7SCfLFE-2LdBvhhUio-iO89c0kPbA/viewform?usp=sf_link" className="active:scale-95 transition-all ease-in-out w-[182.88px] h-[46.01px] md:w-[286px] m-auto md:h-[68px] bg-gradient-to-r from-[var(--mainGradient1)] to-[var(--mainGradient2)] hover:from-[#8a1cb9] hover:to-[#5558b9] rounded-[16px] text-white font-semibold text-[13.8px] md:text-2xl flex justify-center items-center hover:transition-all hover:ease-in-out">
+              Request Service{' '}
               <svg
                 className="ms-3"
                 width="26"
@@ -181,14 +222,31 @@ export default function Hero() {
                   stroke-linejoin="round"
                 />
               </svg>
+              
             </a>
+           
+         <figure className='absolute top-24 md:top-28 -right-7'>
+         <motion.svg initial="hidden"
+    animate="visible" width="67" height="174" viewBox="0 0 67 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_268_11)">
+<motion.path variants={pathVariants} d="M8.50102 1.61569L3.93029 6.10017C3.46695 6.08834 3.00067 6.07884 2.53144 6.07169L7.80068 0.901885L7.80069 0.901882C7.99779 0.708494 8.31436 0.711504 8.50776 0.908621C8.70115 1.10574 8.69813 1.42231 8.50102 1.61569ZM2.50742 9.07167C2.98746 9.07904 3.46412 9.08892 3.93742 9.10129L8.38653 13.636L8.38654 13.636C8.57993 13.8331 8.57687 14.1497 8.37983 14.343L8.37979 14.343C8.18265 14.5364 7.86607 14.5334 7.67271 14.3363L2.50742 9.07167ZM57.7762 33.0098C49.3576 18.7245 32.7705 8.94355 4.36859 8.11287L3.84779 7.58205L4.3276 7.1113C32.9947 7.93508 49.9829 17.8163 58.6377 32.5021C67.5289 47.5891 67.538 67.6083 62.6275 87.7104C57.7137 107.826 47.8531 128.115 36.8784 143.82C31.3906 151.673 25.6157 158.391 20.0296 163.374C14.6429 168.178 9.38955 171.404 4.70714 172.434L4.52193 171.451C8.94927 170.469 14.0373 167.378 19.364 162.627C24.8779 157.71 30.6027 151.054 36.0587 143.246C46.9717 127.63 56.7752 107.454 61.6561 87.4731C66.5402 67.4789 66.4748 47.77 57.7762 33.0098ZM2.93417 8.07874C2.6975 8.07438 2.46004 8.07063 2.22176 8.0675L2.23129 7.06754C2.46598 7.07062 2.69991 7.07429 2.93309 7.07856L2.79054 7.21841L2.43364 7.56858L2.78381 7.92549L2.93417 8.07874Z" stroke="white"/>
+</g>
+<defs>
+<clipPath id="clip0_268_11">
+<rect width="67" height="174" fill="white"/>
+</clipPath>
+</defs>
+</motion.svg>
+         </figure>
+            </div>
+            </div>
           </div>
-          <div className="col-span-6 md:block hidden z-30 lg:me-20">
+          <div className="col-span-6 lg:block hidden z-30 lg:me-20">
             <figure className="w-full homeServiceImages">
               <img
                 src={serviceHero[currentIndex].image}
                 className={`w-[600px] transition-opacity duration-500 ${fadeClass}`}
-                alt="svg image"
+                alt="svg "
               />
               <figcaption className='flex justify-center'>
                 <h2 className='text-3xl text-white font-semibold transition-opacity'>{serviceHero[currentIndex].title}</h2>
@@ -196,7 +254,7 @@ export default function Hero() {
             </figure>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

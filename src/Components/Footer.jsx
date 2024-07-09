@@ -44,7 +44,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="text-[14px] md:text-[18px] text-[var(--thirdColor)] md:text-center mt-2 md:mt-5">
+            <h4 className="text-[14px] md:text-[18px] text-[var(--thirdColor)] text-center mt-2 md:mt-5">
               My Code © 2024
             </h4>
           </div>

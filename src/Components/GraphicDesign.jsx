@@ -6,24 +6,25 @@ export default function GraphicDesign() {
   const webList = [
     {
       id: 1,
-      title: "Corona Pandemic",
-      image: "/graphic/Graphic1.png",
+      title: "Social Media Post",
+      image: "/graphic/Brown-Premium-Coffee-Cup-3.png",
     },
     {
       id: 2,
+      title: "Event Social Media Post",
+      image: "/graphic/Clash-of-Titans-final-4-1.png",
+    },
+    {
+      id: 3,
       title: "Vinicius UCL",
       image: "/graphic/v.png",
     },
     {
-      id: 3,
+      id: 4,
       title: "Eternal - CR7",
       image: "/graphic/cr77framedelyhtnzl.png",
     },
-    {
-      id: 4,
-      title: "Eye",
-      image: "/graphic/Human_eye_with_blood_vessels.png",
-    },
+    
     {
       id: 5,
       title: "Gear - 2 - Solanke",
@@ -79,6 +80,17 @@ export default function GraphicDesign() {
       title: "Vector Art - Salah",
       image: "/graphic/Mohamed-Salah-9.jpg",
     },
+    {
+      id: 16,
+      title: "Corona Pandemic",
+      image: "/graphic/Graphic1.png",
+    },
+    {
+      id: 17,
+      title: "Eye",
+      image: "/graphic/Human_eye_with_blood_vessels.png",
+    },
+    
   ];
 
       function handleModalOpen(e){

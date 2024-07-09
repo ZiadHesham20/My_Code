@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { IoArrowBackCircleOutline  } from "react-icons/io5";
 export default function WebDevelopment() {
@@ -42,8 +42,10 @@ export default function WebDevelopment() {
           },
           
       ];
+      
+      
   return <>
-  <div className='my-20 pt-5'>
+  <div className='my-20 pt-5 cosBehavior'>
     {/* svg */}
   <div className="absolute top-[100px] left-[-99px] ">
           <svg

@@ -15,10 +15,7 @@ import { Pagination,Navigation } from 'swiper/modules';
 
 
 export default function SliderComponent({ projectList }) {
-  let screenWidth = window.screen.width
-  useEffect(() => {
-    console.log(screenWidth);
-  }, [screenWidth])
+ 
   
 
   const settings = {
@@ -30,7 +27,7 @@ export default function SliderComponent({ projectList }) {
   };
   return <>
   <Swiper
-  navigation={screenWidth < 850?false:true} modules={[Navigation]}
+  navigation={true} modules={[Navigation]}
         slidesPerView={3}
         spaceBetween={30}
         breakpoints={{
@@ -47,7 +44,7 @@ export default function SliderComponent({ projectList }) {
             spaceBetween: 40,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 50,
           },
         }}
@@ -56,32 +53,30 @@ export default function SliderComponent({ projectList }) {
     
 
         {projectList.map((elem, idx) => (
-        <SwiperSlide>
-       <span
-         key={idx}
-         className="relative w-[100%] h-[120px] md:h-[260px] bg-white rounded-[16.29px] md:rounded-[40px] customShadow flex items-center justify-center mt-10"
-       >
-         <div className="absolute -top-[55%] md:-top-[40%] lg:-top-[55%] lg:left-[7%] ">
-           <img
-             src={elem.image}
-             className="w-[190px] h-[105.9px] md:w-[280px] md:h-[200px] lg:w-[400px] lg:h-[250px] rounded-[16px] projectImageShadow object-cover"
-             alt="projectName"
-           />
-         </div>
-         <div className="px-5 mt-5 lg:px-8 md:mt-10 lg:mt-16 w-full">
-         <Link to={`/categoryDetails/${elem.link}`} onClick={()=>{document.documentElement.style.scrollBehavior = 'auto'}}>
-           <h4 className="text-[10px] md:text-[24px] gradiantText font-semibold">
-             {elem.name}
-           </h4>
-           </Link>
-           <p className={`text-[6px] md:text-[12px] lg:text-[14px] text-[var(--thirdColor)]`}>
+        
+       <SwiperSlide key={idx} className='w-1/2 sliderItem h-96'>
+        <Link to={`/categoryDetails/${elem.link}`} onClick={()=>{document.documentElement.style.scrollBehavior = 'auto'}}>
+         <div  style={{backgroundImage:`url(${elem.image})`,backgroundPosition:'center 100%',backgroundRepeat:'no-repeat',backgroundSize:'cover'}} className='w-full h-full rounded-lg flex items-end'>
+           
+           <p className={`text-[12px] md:text-[12px] lg:text-[14px] text-[white]  p-5  w-full rounded-b-lg sliderDescription`}>
              {elem.tags}
            </p>
          </div>
-       </span>
-       </SwiperSlide>
+         <div className="px-5 mt-5 lg:px-8 md:mt-10 lg:mt-5 w-full">
+         
+           <h4 className="text-[18px] md:text-[24px] gradiantText font-semibold text-center">
+             {elem.name}
+           </h4>
+          
+         </div>
+         </Link>
+         </SwiperSlide>
+       
      ))}
       </Swiper>
+      
+         
+      
   </>
     // <Flicking
     //   moveType="freeScroll"

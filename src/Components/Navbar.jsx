@@ -11,7 +11,7 @@ function Navbar() {
   };
 
   const isActive = (hash) => {
-    console.log(hash,location.hash);
+    
     return location.hash === hash ? 'border-[var(--secondryColor)]' : 'border-[var(--secondryColorOpactiyNone)]';
   };
 
@@ -41,33 +41,34 @@ function Navbar() {
           <div className="hidden lg:ml-6 lg:flex items-center h-full space-x-4">
             <a
               href="#home"
-              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#home')} hover:border-[var(--secondryColor)] transition-all ease-in-out`}
+              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#home')} hover:border-[var(--secondryColor)] transition-all ease-in-out tabLink`}
               aria-current="page"
             >
               Home
             </a>
             <a
               href="#aboutUs"
-              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#aboutUs')} hover:border-[var(--secondryColor)] transition-all ease-in-out`}
+              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#aboutUs')}   hover:border-[var(--secondryColor)] transition-all ease-in-out tabLink`}
               id='aboutUsTab'
             >
               About Us
             </a>
             <a
               href="#services"
-              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#services')} hover:border-[var(--secondryColor)] transition-all ease-in-out`}
+              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#services')} hover:border-[var(--secondryColor)] transition-all ease-in-out tabLink`}
+            id='servicesTab'
             >
               Services
             </a>
             <a
               href="#portfolio"
-              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#portfolio')} hover:border-[var(--secondryColor)] transition-all ease-in-out`}
+              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#portfolio')} hover:border-[var(--secondryColor)] transition-all ease-in-out tabLink`}
             >
               Portfolio
             </a>
             <a
               href="#faq"
-              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#portfolio')} hover:border-[var(--secondryColor)] transition-all ease-in-out`}
+              className={`rounded-sm px-3  h-full flex items-center  py-2 text-sm font-medium text-gray-300 border-b-4 ${isActive('#portfolio')} hover:border-[var(--secondryColor)] transition-all ease-in-out tabLink`}
             >
               FAQ
             </a>

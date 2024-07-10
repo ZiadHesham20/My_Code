@@ -59,7 +59,7 @@ export default function Projects() {
 
         </div>
           </div>
-          <div className="col-span-12 w-full md:mb-40 md:mt-10 mb-16 mt-5" id='portofilioTitle'>
+          <div className="col-span-12 w-full md:mb-20 md:mt-10 mb-10 mt-5" id='portofilioTitle'>
              <hr className="border-t-2 border-[var(--secondryColor)] w-full " />
           </div>
           {/* slider */}

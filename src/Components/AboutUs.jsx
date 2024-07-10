@@ -4,7 +4,7 @@ export default function AboutUs() {
   return (
     <div className="md:h-[782px] lg:h-[800px] relative overflow-hidden mb-16 md:mb-0 " id='aboutUs'>
       {/* title */}
-      <h2 className="md:text-[64px] text-5xl font-semibold gradiantText text-center py-8 md:py-16 lg:py-8">
+      <h2 className="md:text-[64px] text-5xl font-semibold gradiantText text-center py-8 md:py-16 lg:py-8" >
         About Us
       </h2>
       {/* SVG LAYER */}
@@ -16,7 +16,7 @@ export default function AboutUs() {
         />
       </figure>
       {/* ABOUT ME RECTANGLE */}
-      <div className="relative md:flex justify-center items-center lg:h-dvh  ">
+      <div className="relative md:flex justify-center items-center lg:h-dvh  " id='aboutUsSection'>
         <div  className='w-full md:w-1/2 flex justify-center' id='slogan'>
           <h2 className='text-3xl lg:text-6xl ps-3 text-white  slogan leading-snug'><span className='text-[var(--secondryColor)] lg:text-[93px] text-5xl'>Unleashing</span> Your Brand’s Full Potential  !</h2>
         </div>

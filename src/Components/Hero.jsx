@@ -76,8 +76,8 @@ export default function Hero() {
 
   return (
     <>
-      <div className="py-36 mt-10 lg:pb-0 h-dvh z-30 pt-5 relative overflow-hidden background" id='home'>
-      <span className='points'></span> 
+      <div className="py-36 mt-10 lg:pb-0 h-dvh z-30 pt-5 relative overflow-hidden " id='home'>
+      {/* <span className='points'></span> 
    <span className='points'></span>
    <span className='points'></span>
    <span className='points'></span>
@@ -91,7 +91,7 @@ export default function Hero() {
    <span className='points'></span>
    <span className='points'></span>
    <span className='points'></span>
-   <span className='points'></span>
+   <span className='points'></span> */}
         {/* background svgs */}
         <div className="absolute top-[100px] left-[-99px]">
           <svg

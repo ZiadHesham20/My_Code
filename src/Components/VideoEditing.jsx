@@ -134,7 +134,7 @@ export default function VideoEditing() {
 
     {/* content */}
           <div className='flex items-center'>
-          <Link to={'/'} className='z-50'>
+          <Link to="javascript:history.back()" className='z-50'>
           <IoArrowBackCircleOutline  className='text-5xl text-[var(--secondryColor)]'/>
           </Link>
           <h3 className='text-3xl md:text-5xl font-semibold text-white'>Video Editing</h3>

@@ -105,8 +105,8 @@ export default function Home() {
       <div className='overflow-x-hidden'>
         
       <section >
-      <video src="/heroBg4.mp4" className='relative w-dvw h-svh md:h-dvh object-cover' autoPlay  loop muted ></video>
-      <div className='absolute top-0 bottom-0 left-0 right-0  z-50 costumebg'>
+      <video src="/heroBg4.mp4" className='relative w-dvw h-[100vh] md:h-dvh object-cover' autoPlay  loop muted ></video>
+      <div className='absolute top-0 bottom-0 left-0 right-0  z-50 costumebg h-[100vh]'>
       <Hero />
       </div>
       </section>

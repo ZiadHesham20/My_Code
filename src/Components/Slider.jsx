@@ -16,18 +16,11 @@ import { Pagination,Navigation } from 'swiper/modules';
 
 export default function SliderComponent({ projectList }) {
  
-  
+  let screenWidth = window.screen.width
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  };
   return <>
-  <Swiper
-  navigation={true} modules={[Navigation]}
+   <Swiper
+  navigation={screenWidth < 850?false:true} modules={[Navigation]}
         slidesPerView={3}
         spaceBetween={30}
         breakpoints={{
@@ -44,7 +37,7 @@ export default function SliderComponent({ projectList }) {
             spaceBetween: 40,
           },
           1024: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 50,
           },
         }}
@@ -53,24 +46,32 @@ export default function SliderComponent({ projectList }) {
     
 
         {projectList.map((elem, idx) => (
-        
-       <SwiperSlide key={idx} className='w-1/2 sliderItem h-96'>
-        <Link to={`/categoryDetails/${elem.link}`} onClick={()=>{document.documentElement.style.scrollBehavior = 'auto'}}>
-         <div  style={{backgroundImage:`url(${elem.image})`,backgroundPosition:'center 100%',backgroundRepeat:'no-repeat',backgroundSize:'cover'}} className='w-full h-full rounded-lg flex items-end'>
+        <SwiperSlide>
+          <Link to={`/categoryDetails/${elem.link}`} onClick={()=>{document.documentElement.style.scrollBehavior = 'auto'}}>
+       <span
+         key={idx}
+         className="relative w-[100%] h-[150px] md:h-[260px] bg-white rounded-[16.29px] md:rounded-[40px] customShadow flex items-center justify-center mt-10"
+       >
+         <div className="absolute -top-[45%] md:-top-[40%] lg:-top-[45%] lg:left-[6%] ">
+           <img
+             src={elem.image}
+             className="w-[200px] h-[105.9px] md:w-[280px] md:h-[200px] lg:w-[350px] lg:h-[200px] rounded-[16px] projectImageShadow object-cover"
+             alt="projectName"
+           />
+         </div>
+         <div className="px-5 mt-5 lg:px-8 md:mt-10 lg:mt-16 w-full">
+         
+           <h4 className="text-[20px] md:text-[28px] gradiantText font-semibold">
+             {elem.name}
+           </h4>
            
-           <p className={`text-[12px] md:text-[12px] lg:text-[14px] text-[white]  p-5  w-full rounded-b-lg sliderDescription`}>
+           <p className={`text-[12px] md:text-[12px] lg:text-[16px] text-[var(--thirdColor)]`}>
              {elem.tags}
            </p>
          </div>
-         <div className="px-5 mt-5 lg:px-8 md:mt-10 lg:mt-5 w-full">
-         
-           <h4 className="text-[18px] md:text-[24px] gradiantText font-semibold text-center">
-             {elem.name}
-           </h4>
-          
-         </div>
-         </Link>
-         </SwiperSlide>
+       </span>
+       </Link>
+       </SwiperSlide>
        
      ))}
       </Swiper>

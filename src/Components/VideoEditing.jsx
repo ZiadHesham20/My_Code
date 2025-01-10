@@ -55,7 +55,7 @@ export default function VideoEditing() {
               <path
                 d="M189 210.652C189 284.61 91.6356 368 17.8696 368C-55.8965 368 -99 239.028 -99 165.07C-99 91.112 -22.5052 60 51.2609 60C125.027 60 189 136.694 189 210.652Z"
                 fill="url(#paint0_linear_16_390)"
-                fill-opacity="0.12"
+                fillOpacity="0.12"
               />
             </g>
             <defs>
@@ -66,9 +66,9 @@ export default function VideoEditing() {
                 width="408"
                 height="428"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend
                   mode="normal"
                   in="SourceGraphic"
@@ -88,8 +88,8 @@ export default function VideoEditing() {
                 y2="214"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#B224EF" />
-                <stop offset="1" stop-color="#7579FF" />
+                <stop stopColor="#B224EF" />
+                <stop offset="1" stopColor="#7579FF" />
               </linearGradient>
             </defs>
           </svg>

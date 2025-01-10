@@ -6,7 +6,7 @@ export default function FAQ() {
 
 
 <div className=" relative overflow-hidden" id='faq'>
-<div className="container grid grid-cols-12   justify-items-center w-11/12 m-auto px-12 pb-20 ">
+<div className="container grid grid-cols-12   justify-items-center w-11/12 m-auto px-7 md:px-12 pb-20 ">
   {/* title */}
   <div className="col-span-12 relative  justify-self-start w-full md:w-auto">
     <h3 className="font-semibold md:text-6xl text-4xl gradiantText relative" id='portofilioTitle'>
@@ -34,7 +34,8 @@ export default function FAQ() {
   <div className="col-span-12 w-full z-50  " id='portofilioContent'>
   <div>
       <div className="collapse collapse-plus bg-[#17172e]">
-  <input type="checkbox" name="my-accordion-3"  />
+        
+  <input type="checkbox" name="my-accordion-3"  aria-labelledby='firstQ'/>
   <div className="collapse-title text-xl font-medium text-white">What sets My Code apart from other agencies?</div>
   <div className="collapse-content">
     <p className='text-white'>Our unique combination of creativity, technical expertise, and commitment to client satisfaction sets us 
@@ -42,14 +43,16 @@ export default function FAQ() {
   </div>
 </div>
 <div className="collapse collapse-plus my-2 bg-[#17172e]">
-  <input type="checkbox" name="my-accordion-3" />
+
+  <input type="checkbox" name="my-accordion-3" aria-labelledby='secondQ'/>
   <div className="collapse-title text-xl font-medium text-white">Who are your typical clients?</div>
   <div className="collapse-content">
     <p className='text-white'>We work with a diverse range of clients, from startups to major brands and established companies.</p>
   </div>
 </div>
 <div className="collapse collapse-plus bg-[#17172e]">
-  <input type="checkbox" name="my-accordion-3" />
+
+  <input type="checkbox" name="my-accordion-3" aria-labelledby='thirdQ'/>
   <div className="collapse-title text-xl font-medium text-white"> How can I get a quote for my project?</div>
   <div className="collapse-content">
     <p className='text-white'>You can get a quote by contacting us through our website’s contact form or by emailing us directly at 
@@ -57,7 +60,8 @@ export default function FAQ() {
   </div>
 </div>
 <div className="collapse collapse-plus my-2 bg-[#17172e]">
-  <input type="checkbox" name="my-accordion-3" />
+
+  <input type="checkbox" name="my-accordion-3" aria-labelledby='fourthQ'/>
   <div className="collapse-title text-xl font-medium text-white">What is the process for starting a project with My Code?</div>
   <div className="collapse-content">
     <p className='text-white'>The process typically starts with an initial consultation to understand your needs, followed by a proposal 
@@ -67,7 +71,8 @@ resources to your project and commit to delivering high-quality work on time.</p
   </div>
 </div>
 <div className="collapse collapse-plus bg-[#17172e]">
-  <input type="checkbox" name="my-accordion-3" />
+
+  <input type="checkbox" name="my-accordion-3" aria-labelledby='fifthQ'/>
   <div className="collapse-title text-xl font-medium text-white">How long does it take to complete a project?</div>
   <div className="collapse-content">
     <p className='text-white'>Project timelines vary depending on the complexity and scope of work. During the proposal stage, 
@@ -76,7 +81,8 @@ project as quickly as possible while maintaining the highest standards of qualit
   </div>
 </div>
 <div className="collapse collapse-plus my-2 bg-[#17172e]">
-  <input type="checkbox" name="my-accordion-3" />
+
+  <input type="checkbox" name="my-accordion-3" aria-labelledby='sixthQ'/>
   <div className="collapse-title text-xl font-medium text-white">Can you work with clients outside of Egypt?</div>
   <div className="collapse-content">
     <p className='text-white'>Yes, we work with clients from around the world. Our team is experienced in handling remote projects 
@@ -84,7 +90,8 @@ project as quickly as possible while maintaining the highest standards of qualit
   </div>
 </div>
 <div className="collapse collapse-plus  bg-[#17172e]">
-  <input type="checkbox" name="my-accordion-3" />
+
+  <input type="checkbox" name="my-accordion-3" aria-labelledby='seventhQ'/>
   <div className="collapse-title text-xl font-medium text-white">Can I see examples of your previous work?</div>
   <div className="collapse-content">
     <p className='text-white'>Absolutely! Please visit our portfolio page to see examples of the projects we have completed for our 
@@ -92,7 +99,8 @@ project as quickly as possible while maintaining the highest standards of qualit
   </div>
 </div>
 <div className="collapse collapse-plus my-2 bg-[#17172e]">
-  <input type="checkbox" name="my-accordion-3" />
+
+  <input type="checkbox" name="my-accordion-3" aria-labelledby='eightQ'/>
   <div className="collapse-title text-xl font-medium text-white">What is your pricing structure?</div>
   <div className="collapse-content">
     <p className='text-white'>Our pricing is based on the specific requirements of each project. We provide detailed quotes after 

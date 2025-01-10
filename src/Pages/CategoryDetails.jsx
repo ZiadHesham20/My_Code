@@ -5,6 +5,8 @@ import VideoEditing from '../Components/VideoEditing'
 import ArchitecturalDesign from '../Components/ArchitecturalDesign'
 import Animation from '../Components/Animation'
 import GraphicDesign from '../Components/GraphicDesign'
+import VoiceOver from '../Components/VoiceOver'
+import MobileApplication from '../Components/MobileApplication'
 
 
 export default function CategoryDetails() {
@@ -24,25 +26,19 @@ export default function CategoryDetails() {
 
   switch (type) {
     case 'webDevelopment':
-      return (
-        <WebDevelopment />
-      )
+      return <WebDevelopment />;
+    case 'mobileApplication':
+      return <MobileApplication />;
     case 'animation':
-      return (
-        <Animation/>
-      )
+      return <Animation />;
     case 'architecturalDesign':
-      return (
-        <ArchitecturalDesign/>
-      )
+      return <ArchitecturalDesign />;
     case 'videoEditing':
-      return (
-        <VideoEditing/>
-        )
+      return <VideoEditing />;
     case 'graphicDesign':
-      return (
-        <GraphicDesign/>
-            )
+      return <GraphicDesign />;
+    case 'voiceOver':
+      return <VoiceOver />;
     default:
       break;
   }

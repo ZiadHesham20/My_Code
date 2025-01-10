@@ -7,91 +7,96 @@ export default function GraphicDesign() {
     {
       id: 1,
       title: "Social Media Post",
-      image: "/graphic/Brown-Premium-Coffee-Cup-3.png",
+      image: "/graphic/SocialMedia.jpeg",
     },
     {
       id: 2,
+      title: "Social Media Post",
+      image: "/graphic/SocialMedia2.jpeg",
+    },
+    {
+      id: 3,
       title: "Event Social Media Post",
       image: "/graphic/Clash-of-Titans-final-4-1.png",
     },
     {
-      id: 3,
+      id: 4,
       title: "Vinicius UCL",
       image: "/graphic/v.png",
     },
     {
-      id: 4,
+      id: 5,
       title: "Eternal - CR7",
       image: "/graphic/cr77framedelyhtnzl.png",
     },
     
     {
-      id: 5,
+      id: 6,
       title: "Gear - 2 - Solanke",
       image: "/graphic/sol.jpg",
     },
     {
-      id: 6,
+      id: 7,
       title: "Echos Of The Forgotten",
       image: "/graphic/IMG-20240427-WA0020.jpg",
     },
     {
-      id: 7,
+      id: 8,
       title: "Dune",
       image: "/graphic/IMG-20240427-WA0024.jpg",
     },
     {
-      id: 8,
+      id: 9,
       title: "Sunset Bus",
       image: "/graphic/IMG-20240427-WA0032.jpg",
     },
     {
-      id: 9,
+      id: 10,
       title: "Lost",
       image: "/graphic/IMG-20240501-WA0006.jpg",
     },
     {
-      id: 10,
+      id: 11,
       title: "Wedding",
       image: "/graphic/wedding.jpeg",
     },
     {
-      id: 11,
+      id: 12,
       title: "Five Fifa World Cups",
       image: "/graphic/5-1.png",
     },
     {
-      id: 12,
+      id: 13,
       title: "25 Clearans in CAF",
       image: "/graphic/AFCONCLEAR.png",
     },
     {
-      id: 13,
+      id: 14,
       title: "Karim Benzma",
       image: "/graphic/benzz1.png",
     },
     {
-      id: 14,
+      id: 15,
       title: "Marcelo Brozović",
       image: "/graphic/broxo.png",
     },
     {
-      id: 15,
+      id: 16,
       title: "Vector Art - Salah",
       image: "/graphic/Mohamed-Salah-9.jpg",
     },
     {
-      id: 16,
+      id: 17,
       title: "Corona Pandemic",
       image: "/graphic/Graphic1.png",
     },
     {
-      id: 17,
+      id: 18,
       title: "Eye",
       image: "/graphic/Human_eye_with_blood_vessels.png",
     },
     {
-      id: 18,
+      id: 19,
       title: "Celestial Enigma",
       image: "/design.gif",
     },
@@ -118,7 +123,7 @@ export default function GraphicDesign() {
               <path
                 d="M189 210.652C189 284.61 91.6356 368 17.8696 368C-55.8965 368 -99 239.028 -99 165.07C-99 91.112 -22.5052 60 51.2609 60C125.027 60 189 136.694 189 210.652Z"
                 fill="url(#paint0_linear_16_390)"
-                fill-opacity="0.12"
+                fillOpacity="0.12"
               />
             </g>
             <defs>
@@ -129,9 +134,9 @@ export default function GraphicDesign() {
                 width="408"
                 height="428"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend
                   mode="normal"
                   in="SourceGraphic"
@@ -151,8 +156,8 @@ export default function GraphicDesign() {
                 y2="214"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#B224EF" />
-                <stop offset="1" stop-color="#7579FF" />
+                <stop stopColor="#B224EF" />
+                <stop offset="1" stopColor="#7579FF" />
               </linearGradient>
             </defs>
           </svg>

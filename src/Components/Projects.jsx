@@ -7,7 +7,7 @@ export default function Projects() {
     {
       name: 'Web Development',
       tags: 'Frontend - Backend - Saas',
-      image: '/web/webDevelopment3.png',
+      image: '/web/webDevelopment3.webp',
       link: 'webDevelopment'
     },
     {
@@ -19,14 +19,8 @@ export default function Projects() {
     {
       name: 'Video Editing',
       tags: 'Intro/Outro - Color Correction - VFX - Youtube Video - Ads Tiktok/Instagram Reels - Short Films - Social Media Storys',
-      image: '/sddefault.jpg',
+      image: '/sddefault.webp',
       link: 'videoEditing'
-    },
-    {
-      name: 'Architectural Design',
-      tags: 'Interior Design - Exterior Design',
-      image: '/interiro.jfif',
-      link: 'architecturalDesign'
     },
     {
       name: 'Animation',
@@ -34,11 +28,23 @@ export default function Projects() {
       image: '/ykwim-pixlated.gif',
       link: 'animation'
     },
+    {
+      name: 'Voice Over',
+      tags: 'Voice Overs for Commercials - Doublage',
+      image: '/Voice-Overs-for-Commercials.png',
+      link: 'voiceOver'
+    },
+    {
+      name: 'Architectural Design',
+      tags: 'Interior Design - Exterior Design',
+      image: '/interiro.webp',
+      link: 'architecturalDesign'
+    },
   ];
   return (
     <>
       <div className=" relative overflow-hidden" id='portfolio'>
-        <div className="container grid grid-cols-12   justify-items-center w-11/12 m-auto px-12 pb-20 ">
+        <div className="container grid grid-cols-12   justify-items-center w-11/12 m-auto px-7 md:px-12 pb-20 ">
           {/* title */}
           <div className="col-span-12 relative  justify-self-start w-full md:w-auto">
             <h3 className="font-semibold md:text-6xl text-4xl gradiantText  relative" id='portofilioTitle'>

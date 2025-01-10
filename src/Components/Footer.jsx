@@ -25,24 +25,24 @@ export default function Footer() {
 
         {/* social contnet */}
         <div>
-          <div className="flex items-center justify-center gap-5 md:gap-11">
+          {/* <div className="flex items-center justify-center gap-5 md:gap-11">
             <div>
-              <Link target='_blank' to="https://www.instagram.com/my_code39?igsh=bDBjeTN5Z3psdmhy">
+              <Link target='_blank' to="https://www.instagram.com/my_code39?igsh=bDBjeTN5Z3psdmhy" aria-label={`Contact us via Instagram`}>
               <FaInstagram className='text-4xl text-[var(--mainColor)] hover:text-[var(--secondryColor)] transition-all ease-in-out'/>
               </Link>
             </div>
             <div>
-              <Link target='_blank' to="https://www.facebook.com/profile.php?id=100093022880956&mibextid=ZbWKwL">
+              <Link target='_blank' to="https://www.facebook.com/profile.php?id=100093022880956&mibextid=ZbWKwL" aria-label={`Contact us via Facebook`}>
               <FaFacebook className='text-4xl text-[var(--mainColor)] hover:text-[var(--secondryColor)] transition-all ease-in-out'/>
               </Link>
             </div>
             
             <div>
-              <Link target='_blank' to="mailto:mycidee39@gmail.com">
+              <Link target='_blank' to="mailto:mycidee39@gmail.com" aria-label={`Contact us via our mail`}>
               <FaGoogle className='text-4xl text-[var(--mainColor)] hover:text-[var(--secondryColor)] transition-all ease-in-out'/>
               </Link>
             </div>
-          </div>
+          </div> */}
           <div>
             <h4 className="text-[14px] md:text-[18px] text-[var(--thirdColor)] text-center mt-2 md:mt-5">
               My Code © 2024
